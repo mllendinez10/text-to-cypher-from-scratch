@@ -1,3 +1,8 @@
+"""
+Tests the connection to neo4j by executing a simple Cypher query.
+
+"""
+
 import os
 
 from dotenv import load_dotenv

@@ -1,0 +1,366 @@
+{
+  "nodes": {
+    "Channel": {
+      "description": "A channel product designation",
+      "properties": {
+        "item_number": {
+          "type": "INTEGER",
+          "description": "Product item number"
+        },
+        "designation": {
+          "type": "STRING",
+          "description": "Channel designation"
+        },
+        "length": {
+          "type": "FLOAT",
+          "unit": "m",
+          "description": "Nominal channel length"
+        },
+        "t": {
+          "type": "FLOAT",
+          "unit": "mm",
+          "description": "Channel thickness"
+        },
+        "weight": {
+          "type": "FLOAT",
+          "unit": "kg/m",
+          "description": "Weight per unit length"
+        },
+        "fy": {
+          "type": "FLOAT",
+          "unit": "MPa",
+          "description": "Yield strength"
+        },
+        "area": {
+          "type": "FLOAT",
+          "unit": "mm^2",
+          "description": "Gross cross-sectional area"
+        },
+        "ix": {
+          "type": "FLOAT",
+          "unit": "mm^4",
+          "description": "Gross moment of inertia about the X axis"
+        },
+        "iy": {
+          "type": "FLOAT",
+          "unit": "mm^4",
+          "description": "Gross moment of inertia about the Y axis"
+        },
+        "sx": {
+          "type": "FLOAT",
+          "unit": "mm^3",
+          "description": "Gross section modulus about the X axis"
+        },
+        "sy": {
+          "type": "FLOAT",
+          "unit": "mm^3",
+          "description": "Gross section modulus about the Y axis"
+        },
+        "rx": {
+          "type": "FLOAT",
+          "unit": "mm",
+          "description": "Radius of gyration about the X axis"
+        },
+        "ry": {
+          "type": "FLOAT",
+          "unit": "mm",
+          "description": "Radius of gyration about the Y axis"
+        },
+        "ix_eff": {
+          "type": "FLOAT",
+          "unit": "mm^4",
+          "description": "Effective moment of inertia about the X axis"
+        },
+        "iy_eff": {
+          "type": "FLOAT",
+          "unit": "mm^4",
+          "description": "Effective moment of inertia about the Y axis"
+        },
+        "sx_eff": {
+          "type": "FLOAT",
+          "unit": "mm^3",
+          "description": "Effective section modulus about the X axis"
+        },
+        "sy_eff": {
+          "type": "FLOAT",
+          "unit": "mm^3",
+          "description": "Effective section modulus about the Y axis"
+        },
+        "mal_x": {
+          "type": "FLOAT",
+          "unit": "kN.m",
+          "description": "Allowable local-buckling bending moment about the X axis"
+        },
+        "phi_ml_x": {
+          "type": "FLOAT",
+          "unit": "kN.m",
+          "description": "LRFD local-buckling bending strength about the X axis"
+        },
+        "mal_y": {
+          "type": "FLOAT",
+          "unit": "kN.m",
+          "description": "Allowable local-buckling bending moment about the Y axis"
+        },
+        "phi_ml_y": {
+          "type": "FLOAT",
+          "unit": "kN.m",
+          "description": "LRFD local-buckling bending strength about the Y axis"
+        },
+        "mad_x": {
+          "type": "FLOAT",
+          "unit": "kN.m",
+          "description": "Allowable distortional bending moment about the X axis"
+        },
+        "phi_md_x": {
+          "type": "FLOAT",
+          "unit": "kN.m",
+          "description": "LRFD distortional bending strength about the X axis"
+        },
+        "mad_y": {
+          "type": "FLOAT",
+          "unit": "kN.m",
+          "description": "Allowable distortional bending moment about the Y axis"
+        },
+        "phi_md_y": {
+          "type": "FLOAT",
+          "unit": "kN.m",
+          "description": "LRFD distortional bending strength about the Y axis"
+        },
+        "va_x": {
+          "type": "FLOAT",
+          "unit": "N",
+          "description": "Allowable shear about the X axis"
+        },
+        "phi_v_x": {
+          "type": "FLOAT",
+          "unit": "N",
+          "description": "LRFD design shear about the X axis"
+        },
+        "va_y": {
+          "type": "FLOAT",
+          "unit": "N",
+          "description": "Allowable shear about the Y axis"
+        },
+        "phi_v_y": {
+          "type": "FLOAT",
+          "unit": "N",
+          "description": "LRFD design shear about the Y axis"
+        },
+        "lu": {
+          "type": "FLOAT",
+          "unit": "m",
+          "description": "Limit of unbraced length"
+        },
+        "j": {
+          "type": "FLOAT",
+          "unit": "mm^4",
+          "description": "St. Venant torsional constant"
+        },
+        "cw": {
+          "type": "FLOAT",
+          "unit": "mm^6",
+          "description": "Torsional warping constant"
+        },
+        "x0": {
+          "type": "FLOAT",
+          "unit": "mm",
+          "description": "Shear-centre distance along the principal X axis"
+        },
+        "y0": {
+          "type": "FLOAT",
+          "unit": "mm",
+          "description": "Shear-centre distance along the principal Y axis"
+        },
+        "r0": {
+          "type": "FLOAT",
+          "unit": "mm",
+          "description": "Polar radius of gyration about the shear centre"
+        }
+      }
+    },
+    "Connector": {
+      "description": "A connector product. Nodes created only from a channel connector designation may lack an item number.",
+      "properties": {
+        "item_number": {
+          "type": "INTEGER",
+          "description": "Product item number, when available"
+        },
+        "designation": {
+          "type": "STRING",
+          "description": "Connector product designation"
+        }
+      }
+    },
+    "Material": {
+      "properties": {
+        "name": {
+          "type": "STRING",
+          "description": "Steel material grade"
+        }
+      }
+    },
+    "CoatingMaterial": {
+      "properties": {
+        "name": {
+          "type": "STRING",
+          "description": "Coating material designation"
+        }
+      }
+    },
+    "CoatingStandard": {
+      "properties": {
+        "name": {
+          "type": "STRING",
+          "description": "Coating according to standard"
+        }
+      }
+    },
+    "MaterialStandard": {
+      "properties": {
+        "name": {
+          "type": "STRING",
+          "description": "Material standard"
+        }
+      }
+    },
+    "CoatingMethod": {
+      "properties": {
+        "name": {
+          "type": "STRING",
+          "description": "Coating method, such as galvanized or hot dip galvanized"
+        }
+      }
+    },
+    "TorqueConfiguration": {
+      "description": "A torque specification for a connector",
+      "properties": {
+        "torque_id": {
+          "type": "STRING",
+          "description": "Unique torque configuration identifier"
+        },
+        "torque": {
+          "type": "FLOAT",
+          "unit": "Nm",
+          "description": "Required installation torque"
+        }
+      }
+    },
+    "Bolt": {
+      "properties": {
+        "designation": {
+          "type": "STRING",
+          "description": "Bolt designation"
+        }
+      }
+    },
+    "ResistanceConfiguration": {
+      "description": "Characteristic force resistances for a connector installation with a specified channel and channel connector quantities. Missing resistance properties mean no value is provided, not zero.",
+      "properties": {
+        "resistance_id": {
+          "type": "STRING",
+          "description": "Unique resistance configuration identifier"
+        },
+        "angle_connector_quantity": {
+          "type": "INTEGER",
+          "description": "Number of angle connectors in the configuration"
+        },
+        "fx_positive": {
+          "type": "FLOAT",
+          "unit": "kN",
+          "description": "Characteristic resistance in the positive local X direction"
+        },
+        "fx_negative": {
+          "type": "FLOAT",
+          "unit": "kN",
+          "description": "Characteristic resistance in the negative local X direction"
+        },
+        "fy_positive": {
+          "type": "FLOAT",
+          "unit": "kN",
+          "description": "Characteristic resistance in the positive local Y direction"
+        },
+        "fy_negative": {
+          "type": "FLOAT",
+          "unit": "kN",
+          "description": "Characteristic resistance in the negative local Y direction"
+        },
+        "fz_positive": {
+          "type": "FLOAT",
+          "unit": "kN",
+          "description": "Characteristic resistance in the positive local Z direction"
+        },
+        "fz_negative": {
+          "type": "FLOAT",
+          "unit": "kN",
+          "description": "Characteristic resistance in the negative local Z direction"
+        }
+      }
+    }
+  },
+  "relationships": [
+    {
+      "type": "HAS_MATERIAL",
+      "from": "Channel",
+      "to": "Material"
+    },
+    {
+      "type": "HAS_MATERIAL",
+      "from": "Connector",
+      "to": "Material"
+    },
+    {
+      "type": "HAS_COATING_MATERIAL",
+      "from": "Channel",
+      "to": "CoatingMaterial"
+    },
+    {
+      "type": "HAS_COATING_STANDARD",
+      "from": "Channel",
+      "to": "CoatingStandard"
+    },
+    {
+      "type": "HAS_MATERIAL_STANDARD",
+      "from": "Connector",
+      "to": "MaterialStandard"
+    },
+    {
+      "type": "HAS_COATING_METHOD",
+      "from": "Connector",
+      "to": "CoatingMethod"
+    },
+    {
+      "type": "HAS_TORQUE_CONFIGURATION",
+      "from": "Connector",
+      "to": "TorqueConfiguration"
+    },
+    {
+      "type": "HAS_BOLT",
+      "from": "TorqueConfiguration",
+      "to": "Bolt",
+      "description": "Present only when a bolt is specified"
+    },
+    {
+      "type": "HAS_RESISTANCE_CONFIGURATION",
+      "from": "Connector",
+      "to": "ResistanceConfiguration"
+    },
+    {
+      "type": "USES_CHANNEL",
+      "from": "ResistanceConfiguration",
+      "to": "Channel",
+      "description": "Installation channel referenced by its designation"
+    },
+    {
+      "type": "USES_CHANNEL_CONNECTOR",
+      "from": "ResistanceConfiguration",
+      "to": "Connector",
+      "description": "A channel connector type required by the configuration",
+      "properties": {
+        "quantity": {
+          "type": "INTEGER",
+          "description": "Number of this channel connector required by the configuration"
+        }
+      }
+    }
+  ]
+}
